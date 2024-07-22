@@ -1,0 +1,10 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $grey-900;
+}

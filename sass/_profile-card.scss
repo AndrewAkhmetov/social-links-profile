@@ -1,0 +1,69 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  padding: $spacing-500;
+  border-radius: 12px;
+  gap: $spacing-300;
+  margin-top: 23px;
+  text-align: center;
+  background-color: $grey-800;
+
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-profile-img {
+      width: 88px;
+      border-radius: 999px;
+    }
+  }
+
+  &__identity {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-50;
+
+    &-name {
+      @include text-large-bold;
+    }
+
+    &-location {
+      @include text-medium-bold;
+      color: $green;
+    }
+  }
+
+  &__bio {
+    @include text-medium-regular;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-200;
+    @include text-medium-bold;
+
+    &-button {
+      padding: $spacing-150;
+      border-radius: 8px;
+      background-color: $grey-700;
+
+      @media (hover: hover) {
+        &:hover { 
+          background-color: $green;
+          color: $grey-700;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    padding: $spacing-300;
+  }
+}

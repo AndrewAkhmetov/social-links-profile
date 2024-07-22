@@ -1,0 +1,17 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.attribution {
+  text-align: center;
+  @include text-footer;
+
+  &__link {
+    color: $green;
+
+    @media (hover: hover) {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.container {
+  margin: 0 auto;
+  max-width: map-get($container-max-widths, lg);
+  width: 100%;
+  @include md(md);
+  @include md(sm);
+  @include md(xs);
+}
